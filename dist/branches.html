@@ -3,90 +3,91 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Филиалы</title>
-  <link href="styles/normolize-css" rel="stylesheet">
-  <link href="styles/style.css" rel="stylesheet">
+  <title>Главная</title>
+  <link href="../public/styles.css" rel="stylesheet">
+  <!-- <link href="styles/normolize-css" rel="stylesheet"> -->
+  <!-- <link href="styles/style.css" rel="stylesheet"> -->
 </head>
 
 <body>
-    <header>
-        <div class="hedcont">
-          <div class="logo">
-            <a href="index.html"> <img src="img/logo.png" alt="s"></a>
-          </div>
-          <nav class="nav">
-            <a href="branches.html">Филиалы</a>
-            <a href="booking.html">Бронирование</a>
-            <a href="login.html">Личный кабинет</a>
-          </nav>
-        </div>  
-    </header>
-
-    <main class="branches-cont">
-        <div class="map-bran">
-
-            <div id="map">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad3eadb0f83e984a6e162c26b3d63f280397cf3fdf830bccf1d203dbfa9a59b86&amp;width=556&amp;height=382&amp;lang=ru_RU&amp;scroll=true"></script>
-            </div>
+  <header class="bg-white shadow ">
+    <div class="container py-4 mx-auto max-w-5xl">
+      <div class="flex items-center justify-between">
+        <div class="flex-shrink-0 ">
+          <a href="index.html">
+            <img src="img/logo.png" alt="s" class="h-10">
+          </a>
         </div>
-        <div class="branch-locations">
-            <div class="branch-list">
-              <h3>Филиал 1</h3>
-              <ul>
-                <li>Toyota Corolla</li>
-                <li>Chevrolet Cruze</li>
-                <li>Ford Focus</li>
-              </ul>
-            </div>
-            <div class="branch-list">
-              <h3>Филиал 2</h3>
-              <ul>
-                <li>Toyota Camry</li>
-                <li>Nissan Altima</li>
-                <li>Honda Accord</li>
-              </ul>
-            </div>
-            <div class="branch-list">
-              <h3>Филиал 3</h3>
-              <ul>
-                <li>Hyundai Sonata</li>
-                <li>Kia Optima</li>
-                <li>Mazda 6</li>
-              </ul>
-            </div>
-            <div class="branch-list">
-              <h3>Филиал 4</h3>
-              <ul>
-                <li>Toyota RAV4</li>
-                <li>Ford Escape</li>
-                <li>Honda CR-V</li>
-              </ul>
-            </div>
-            <div class="branch-list">
-              <h3>Филиал 5 (Центр города)</h3>
-              <ul>
-                <li>Toyota Corolla</li>
-                <li>Chevrolet Tahoe</li>
-                <li>Mercedes Benz GLE 400</li>
-              </ul>
-            </div>
-          </div>
-    </main>
+        <nav class="hidden md:block">
+          <a href="branches.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Филиалы</a>
+          <a href="booking.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Бронирование</a>
+          <a href="login.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Личный кабинет</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <footer>
-      <div class="footer-container">
-        <div class="footer-contact">
-          <p>Телефон: 8 (800) 555-35-35</p>
-        </div>
-        <div class="footer-nav">
-          <a href="#">Филиалы</a>
-          <a href="booking.html">Бронирование</a>
-          <a href="#">Личный кабинет</a>
-          <a href="history.html">История</a>
-          
-        </div>
-    </footer>
+  <main class="branches-cont">
+    <div class="map-bran bg-gray-100 p-4 rounded-lg shadow-md mx-auto flex justify-center">
+      <div id="map" class="h-96"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad3eadb0f83e984a6e162c26b3d63f280397cf3fdf830bccf1d203dbfa9a59b86&amp;width=800&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script></div>
+    </div>
+    <div class="branch-locations bg-gray-100 p-4 rounded-lg shadow-md">
+      <div class="overflow-x-auto">
+        <table class="table-auto w-full bg-white">
+          <thead>
+            <tr>
+              <th class="py-2 px-4 border">Филиал</th>
+              <th class="py-2 px-4 border">Модели автомобилей</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="py-2 px-4 border font-bold">Филиал 1</td>
+              <td class="py-2 px-4 border">Toyota Corolla, Chevrolet Cruze, Ford Focus</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border font-bold">Филиал 2</td>
+              <td class="py-2 px-4 border">Toyota Camry, Nissan Altima, Honda Accord</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border font-bold">Филиал 3</td>
+              <td class="py-2 px-4 border">Hyundai Sonata, Kia Optima, Mazda 6</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border font-bold">Филиал 4</td>
+              <td class="py-2 px-4 border">Toyota RAV4, Ford Escape, Honda CR-V</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border font-bold">Филиал 5 (Центр города)</td>
+              <td class="py-2 px-4 border">Toyota Corolla, Chevrolet Tahoe, Mercedes Benz GLE 400</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
 
+  <footer class="bg-white shadow text-black py-4">
+    <div class="container mx-auto flex justify-between items-center max-w-5xl">
+      <div class="footer-contact">
+        <p class="mx-4 font-bold">Телефон: 8 (800) 555-35-35</p>
+      </div>
+      <div class="footer-nav grid grid-cols-2 gap-4 justify-end items-center">
+        <div class="flex flex-col">
+          <a href="branches.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Филиалы</a>
+          <a href="booking.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Бронирование</a>
+          <a href="login.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Войти</a>
+          <a href="register.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Регистрация</a>
+        </div>
+        <div class="flex flex-col">
+          <a href="profile.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Личный кабинет</a>
+          <a href="history.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">История бронирования</a>
+          <a href="cards.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Банковские карты</a>
+          <a href="car-select.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Выбор автомобиля</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
     <script src="js/script.js"></script>
 </body>

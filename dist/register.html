@@ -3,67 +3,78 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Регистрация</title>
-  <link href="styles/normolize-css" rel="stylesheet">
-  <link href="styles/style.css" rel="stylesheet">
+  <title>Главная</title>
+  <link href="../public/styles.css" rel="stylesheet">
+  <!-- <link href="styles/normolize-css" rel="stylesheet"> -->
+  <!-- <link href="styles/style.css" rel="stylesheet"> -->
 </head>
 
 <body>
-    <header>
-        <div class="hedcont">
-          <div class="logo">
-            <a href="index.html"> <img src="img/logo.png" alt="s"></a>
-          </div>
-          <nav class="nav">
-            <a href="branches.html">Филиалы</a>
-            <a href="booking.html">Бронирование</a>
-            <a href="login.html">Личный кабинет</a>
-          </nav>
-        </div>  
-    </header>
-
-      <main class="login-cont">
-          <div class="login-block">
-              <h2>Создать аккаунт</h2>
-              <form>
-                <label for="last-name">Фамилия:</label>
-                <input type="text" id="last-name" name="last-name" required>
-                <label for="first-name">Имя:</label>
-                <input type="text" id="first-name" name="first-name" required>
-                <label for="middle-name">Отчество:</label>
-                <input type="text" id="middle-name" name="middle-name" required>
-                <label for="passport">Паспортные данные (серия и номер):</label>
-                <input type="text" id="passport" name="passport" required>
-                <label for="phone">Телефон:</label>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="date-of-birth">Дата рождения:</label>
-                <input type="date" id="date-of-birth" name="date-of-birth" required>
-                <label for="password">Пароль:</label>
-                <input type="password" id="password" name="password" required>
-                <label for="confirm-password">Повторите пароль:</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
-                <button type="submit" formaction="profile.html">Зарегистрироваться</button>
-              </form>
-            </div>
-
-      </main>
-    <footer>
-      <div class="footer-container">
-        <div class="footer-contact">
-          <p>Телефон: 8 (800) 555-35-35</p>
+  <header class="bg-white shadow ">
+    <div class="container py-4 mx-auto max-w-5xl">
+      <div class="flex items-center justify-between">
+        <div class="flex-shrink-0 ">
+          <a href="index.html">
+            <img src="img/logo.png" alt="s" class="h-10">
+          </a>
         </div>
-        <div class="footer-nav">
-          <a href="#">Филиалы</a>
-          <a href="booking.html">Бронирование</a>
-          <a href="#">Личный кабинет</a>
-          <a href="history.html">История</a>
-          
+        <nav class="hidden md:block">
+          <a href="branches.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Филиалы</a>
+          <a href="booking.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Бронирование</a>
+          <a href="login.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Личный кабинет</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="login-cont">
+      <div class="login-block">
+          <h2>Создать аккаунт</h2>
+          <form>
+            <label for="last-name">Фамилия:</label>
+            <input type="text" id="last-name" name="last-name" required>
+            <label for="first-name">Имя:</label>
+            <input type="text" id="first-name" name="first-name" required>
+            <label for="middle-name">Отчество:</label>
+            <input type="text" id="middle-name" name="middle-name" required>
+            <label for="passport">Паспортные данные (серия и номер):</label>
+            <input type="text" id="passport" name="passport" required>
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="date-of-birth">Дата рождения:</label>
+            <input type="date" id="date-of-birth" name="date-of-birth" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirm-password">Повторите пароль:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <button type="submit" formaction="profile.html">Зарегистрироваться</button>
+          </form>
+        </div>
+
+    </main>
+    <footer class="bg-white shadow text-black py-4">
+      <div class="container mx-auto flex justify-between items-center max-w-5xl">
+        <div class="footer-contact">
+          <p class="mx-4 font-bold">Телефон: 8 (800) 555-35-35</p>
+        </div>
+        <div class="footer-nav grid grid-cols-2 gap-4 justify-end items-center">
+          <div class="flex flex-col">
+            <a href="branches.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Филиалы</a>
+            <a href="booking.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Бронирование</a>
+            <a href="login.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Войти</a>
+            <a href="register.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Регистрация</a>
+          </div>
+          <div class="flex flex-col">
+            <a href="profile.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Личный кабинет</a>
+            <a href="history.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">История бронирования</a>
+            <a href="cards.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Банковские карты</a>
+            <a href="car-select.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Выбор автомобиля</a>
+          </div>
         </div>
       </div>
     </footer>
-
-
-    <script src="js/script.js"></script>
-</body>
-
-</html>
+  
+      <script src="js/script.js"></script>
+  </body>
+  
+  </html>

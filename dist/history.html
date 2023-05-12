@@ -3,25 +3,25 @@
 
 <head>
   <meta charset="utf-8">
-  <title>История бронирования</title>
+  <title>Главная</title>
   <link href="../public/styles.css" rel="stylesheet">
   <!-- <link href="styles/normolize-css" rel="stylesheet"> -->
   <!-- <link href="styles/style.css" rel="stylesheet"> -->
 </head>
 
 <body>
-  <header class="bg-white shadow">
-    <div class="container mx-auto py-4">
+  <header class="bg-white shadow ">
+    <div class="container py-4 mx-auto max-w-5xl">
       <div class="flex items-center justify-between">
-        <div class="flex-shrink-0">
+        <div class="flex-shrink-0 ">
           <a href="index.html">
-            <img src="img/logo.png" alt="s" class="h-8">
+            <img src="img/logo.png" alt="s" class="h-10">
           </a>
         </div>
         <nav class="hidden md:block">
-          <a href="branches.html" class="text-gray-600 hover:text-gray-800 font-medium mx-4">Филиалы</a>
-          <a href="booking.html" class="text-gray-600 hover:text-gray-800 font-medium mx-4">Бронирование</a>
-          <a href="login.html" class="text-gray-600 hover:text-gray-800 font-medium mx-4">Личный кабинет</a>
+          <a href="branches.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Филиалы</a>
+          <a href="booking.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Бронирование</a>
+          <a href="login.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Личный кабинет</a>
         </nav>
       </div>
     </div>
@@ -150,20 +150,27 @@
     
   </main>
 
-  <footer class="bg-gray-900 text-white py-4">
-    <div class="container mx-auto flex justify-between items-center">
+  <footer class="bg-white shadow text-black py-4">
+    <div class="container mx-auto flex justify-between items-center max-w-5xl">
       <div class="footer-contact">
-        <p>Телефон: 8 (800) 555-35-35</p>
+        <p class="mx-4 font-bold">Телефон: 8 (800) 555-35-35</p>
       </div>
-      <div class="footer-nav">
-        <a href="branches.html" class="mx-4 hover:text-gray-300">Филиалы</a>
-        <a href="booking.html" class="mx-4 hover:text-gray-300">Бронирование</a>
-        <a href="login.html" class="mx-4 hover:text-gray-300">Личный кабинет</a>
-        <a href="history.html" class="mx-4 hover:text-gray-300">История</a>
+      <div class="footer-nav grid grid-cols-2 gap-4 justify-end items-center">
+        <div class="flex flex-col">
+          <a href="branches.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Филиалы</a>
+          <a href="booking.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Бронирование</a>
+          <a href="login.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Войти</a>
+          <a href="register.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Регистрация</a>
+        </div>
+        <div class="flex flex-col">
+          <a href="profile.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Личный кабинет</a>
+          <a href="history.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">История бронирования</a>
+          <a href="cards.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Банковские карты</a>
+          <a href="car-select.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Выбор автомобиля</a>
+        </div>
       </div>
     </div>
   </footer>
-
 
     <script src="js/script.js"></script>
 </body>
