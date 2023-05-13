@@ -2,109 +2,87 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Главная</title>
-  <link href="../public/styles.css" rel="stylesheet">
-  <!-- <link href="styles/normolize-css" rel="stylesheet"> -->
-  <!-- <link href="styles/style.css" rel="stylesheet"> -->
+	<meta charset="utf-8">
+	<title>Главная</title>
+	<link href="../public/styles.css" rel="stylesheet">
+	<!-- <link href="styles/normolize-css" rel="stylesheet"> -->
+	<!-- <link href="styles/style.css" rel="stylesheet"> -->
 </head>
 
 <body>
-  <header class="bg-white shadow ">
-    <div class="container py-4 mx-auto max-w-5xl">
-      <div class="flex items-center justify-between">
-        <div class="flex-shrink-0 ">
-          <a href="index.html">
-            <img src="img/logo.png" alt="s" class="h-10">
-          </a>
-        </div>
-        <nav class="hidden md:block">
-          <a href="branches.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Филиалы</a>
-          <a href="booking.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Бронирование</a>
-          <a href="login.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Личный кабинет</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-    
-    <main class="card-cont">
-      <div class="card-list">
-        <div class="card">
-          <button class="delete">Удалить</button>
-          <div class="type">Visa</div>
-          <div class="number">**** **** **** 1234</div>
-          <div class="activity">Активна</div>
-        </div>
-        <div class="card">
-          <button class="delete">Удалить</button>
-          <div class="type">MasterCard</div>
-          <div class="number">**** **** **** 5678</div>
-          <div class="activity">Закончился срок обслуживания карты</div>
-        </div>
-        <div class="card">
-          <button class="delete">Удалить</button>
-          <div class="type">Мир</div>
-          <div class="number">**** **** **** 9012</div>
-          <div class="activity">Активна</div>
-        </div>
-      </div>
+	<header class="bg-white shadow ">
+		<div class="container py-4 mx-auto max-w-5xl">
+			<div class="flex items-center justify-between">
+				<div class="flex-shrink-0 ">
+					<a href="index.html"> <img src="img/logo.png" alt="s" class="h-10"> </a>
+				</div>
+				<nav class="hidden md:block"> <a href="branches.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Филиалы</a> <a href="booking.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Бронирование</a> <a href="login.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Личный кабинет</a> </nav>
+			</div>
+		</div>
+	</header>
+	<main class="card-cont bg-gray-100 py-8 ">
+		<div class="container mx-auto p-2">
+			<h1 class="text-3xl font-bold mb-4 text-center">Мои карты</h1>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="card-list">
+				<div class="card border border-gray-300 rounded-md p-4">
+					<div class="type text-lg font-bold mb-2 text-gray-700">Visa</div>
+					<div class="number text-2xl font-bold mb-4 text-gray-900">**** **** **** 1234</div>
+					<div class="activity text-sm font-medium text-green-500">Активна</div>
+				</div>
+				<div class="card border border-gray-300 rounded-md p-4">
+					<div class="type text-lg font-bold mb-2 text-gray-700">MasterCard</div>
+					<div class="number text-2xl font-bold mb-4 text-gray-900">**** **** **** 5678</div>
+					<div class="activity text-sm font-medium text-red-500">Закончился срок обслуживания карты</div>
+				</div>
+				<div class="card border border-gray-300 rounded-md p-4">
+					<div class="type text-lg font-bold mb-2 text-gray-700">Мир</div>
+					<div class="number text-2xl font-bold mb-4 text-gray-900">**** **** **** 9012</div>
+					<div class="activity text-sm font-medium text-green-500">Активна</div>
+				</div>
+			</div>
+			<div class="flex justify-center items-center mt-8 flex-col">
+				<div class="popup-box">
+					<button class="popup-button bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out mb-3">Добавить карту</button>
+				</div>
+				<button class="delete-selected bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 transition duration-300 ease-in-out mx-4">Удалить выбранные</button>
+			</div>
+			<div id="popup-overlay" class="fixed inset-0 z-10 hidden overflow-y-auto">
+				<div class="flex items-center justify-center min-h-screen">
+					<div class="bg-white rounded-lg border border-gray-500 w-full max-w-md mx-auto p-8">
+						<h2 class="text-2xl font-bold mb-4">Добавление карточки для оплаты</h2>
+						<button class="popup-close absolute top-0 right-0 mt-2 mr-2 text-3xl text-gray-500 hover:text-red-500 focus:text-red-500 transition duration-300 ease-in-out">&times;</button>
+						<div class="popup-text">
+							<form action="" method="post" class="space-y-4">
+								<label for="card-number" class="block font-medium text-gray-700">Номер карты:</label>
+								<input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="card-number" name="card-number" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="19" required>
+								<label for="card-type" class="block font-medium text-gray-700">Тип карты:</label>
+								<select class="form-control bg-gray-100 border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="card-type" name="card-type" required>
+									<option value="Visa">Visa</option>
+									<option value="MasterCard">MasterCard</option>
+									<option value="Мир">Мир</option>
+								</select>
+								<label for="card-expiry" class="block font-medium text-gray-700">Срок действия:</label>
+								<input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="card-expiry" name="card-expiry" pattern="[0-9]{2}/[0-9]{2}" maxlength="5" required>
+								<button type="submit" class="popup-submit bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out">Добавить</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="bg-white shadow text-black py-4">
+		<div class="container mx-auto flex justify-between items-center max-w-5xl">
+			<div class="footer-contact">
+				<p class="mx-4 font-bold">Телефон: 8 (800) 555-35-35</p>
+			</div>
+			<div class="footer-nav grid grid-cols-2 gap-4 justify-end items-center">
+				<div class="flex flex-col"> <a href="branches.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Филиалы</a> <a href="booking.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Бронирование</a> <a href="login.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Войти</a> <a href="register.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Регистрация</a> </div>
+				<div class="flex flex-col"> <a href="profile.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Личный кабинет</a> <a href="history.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">История бронирования</a> <a href="cards.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Банковские карты</a> <a href="car-select.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Выбор автомобиля</a> </div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/script.js"></script>
+</body>
 
-      <!-- Кнопка для открытия модального окна -->
-      <div class="popup-box">
-        <a class="popup-button" href="#popup-window">Добавить карту</a>
-      </div>
-
-      <!-- Модальное окно -->
-      <div id="popup-window" class="popup-overlay">
-        <div class="popup-content">
-          <h2>Добавление карточки для оплаты</h2>
-          <a class="popup-close" href="#">&times;</a>
-          <div class="popup-text">
-            <form action="" method="post">
-              <label for="card-number">Номер карты:</label>
-              <input type="text" class="form-control" id="card-number" name="card-number" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="19" required>
-              
-              <label for="card-holder-name">Имя и фамилия держателя карты:</label>
-              <input type="text" class="form-control" id="card-holder-name" name="card-holder-name" required>
-              
-              <label for="card-expiry-date">Дата окончания:</label>
-              <input type="text" class="form-control" id="card-expiry-date" name="card-expiry-date" placeholder="ММ/ГГ" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" maxlength="5" required>
-              
-              <label for="card-cvv">CVV/CVC:</label>
-              <input type="text" class="form-control" id="card-cvv" name="card-cvv" placeholder="XXX" pattern="[0-9]{3}" maxlength="3" required>
-              
-              <input type="submit" value="Добавить">
-            </form>
-          </div>
-        </div>
-      </div>
-            
-
-    </main>
-
-    <footer class="bg-white shadow text-black py-4">
-      <div class="container mx-auto flex justify-between items-center max-w-5xl">
-        <div class="footer-contact">
-          <p class="mx-4 font-bold">Телефон: 8 (800) 555-35-35</p>
-        </div>
-        <div class="footer-nav grid grid-cols-2 gap-4 justify-end items-center">
-          <div class="flex flex-col">
-            <a href="branches.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Филиалы</a>
-            <a href="booking.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Бронирование</a>
-            <a href="login.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Войти</a>
-            <a href="register.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Регистрация</a>
-          </div>
-          <div class="flex flex-col">
-            <a href="profile.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Личный кабинет</a>
-            <a href="history.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">История бронирования</a>
-            <a href="cards.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Банковские карты</a>
-            <a href="car-select.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Выбор автомобиля</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  
-      <script src="js/script.js"></script>
-  </body>
-  
-  </html>
+</html>
