@@ -27,63 +27,143 @@
     </div>
   </header>
 
-    <main class="car-selection-cont">
-        <div class="car-selection">
-            <h2>Выберите автомобиль</h2>
-            <form>
-              <div class="form-group-sel">
-                <label for="car-make">Марка автомобиля:</label>
-                <select id="car-make" name="car-make">
-                  <option value="Audi">Audi</option>
-                  <option value="BMW">BMW</option>
-                  <option value="Ford">Ford</option>
-                  <option value="Honda">Honda</option>
-                  <option value="Hyundai">Hyundai</option>
-                  <option value="Kia">Kia</option>
-                  <option value="Mazda">Mazda</option>
-                  <option value="Nissan">Nissan</option>
-                  <option value="Toyota">Toyota</option>
-                  <option value="Volkswagen">Volkswagen</option>
+    <main class="bg-gray-100">
+      <div class="max-w-2xl mx-auto p-5 ">
+        <h1 class="text-3xl text-center font-bold mb-6">Выберите автомобиль</h1>
+        <div class="bg-white border border-gray-300 rounded-lg px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="make">Марка автомобиля</label>
+                <select class="border-2 border-gray-300 rounded-lg p-2 w-full" id="make" name="make">
+                    <option value="">Выберите марку автомобиля</option>
+                    <option value="Audi">Audi</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Volkswagen">Volkswagen</option>
                 </select>
-              </div>
-          
-              <div class="form-group-sel">
-                <label for="car-model">Модель автомобиля:</label>
-                <input type="text" id="car-model" name="car-model">
-              </div>
-          
-              <div class="form-group-sel">
-                <label for="car-color">Цвет автомобиля:</label>
-                <input type="text" id="car-color" name="car-color">
-              </div>
-          
-              <div class="form-group-sel">
-                <label for="engine-type">Тип двигателя:</label>
-                <select id="engine-type" name="engine-type">
-                  <option value="benzine">Бензиновый</option>
-                  <option value="diesel">Дизельный</option>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="model">Модель автомобиля</label>
+                <select class="border-2 border-gray-300 rounded-lg p-2 w-full" id="model" name="model" disabled>
+                    <option value="">Выберите модель автомобиля</option>
                 </select>
-              </div>
-          
-              <div class="form-group-sel">
-                <label for="transmission">Коробка передач:</label>
-                <select id="transmission" name="transmission">
-                  <option value="manual">МКП</option>
-                  <option value="automatic">АКП</option>
-                </select>
-              </div>
-          
-              <div class="form-group-sel">
-                <label for="car-image">Картинка автомобиля:</label>
-                <input type="file" id="car-image" name="car-image">
-              </div>
-          
-              <div class="form-group-sel">
-                <button type="submit">Выбрать</button>
-                <button type="button" class="cancel-btn">Отмена</button>
-              </div>
-            </form>
-          </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="color">Цвет автомобиля</label>
+                <input class="border-2 border-gray-300 rounded-lg p-2 w-full" id="color" type="text" name="color" placeholder="Введите цвет автомобиля">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2">Тип двигателя</label>
+                <div class="flex items-center">
+                    <input class="mr-2" id="gasoline" type="radio" name="engine" value="Бензиновый">
+                    <label class="text-gray-700" for="gasoline">Бензиновый</label>
+                </div>
+                <div class="flex items-center">
+                    <input class="mr-2" id="diesel" type="radio" name="engine" value="Дизельный">
+                    <label class="text-gray-700" for="diesel">Дизельный</label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2">Коробка передач</label>
+                <div class="flex items-center">
+                    <input class="mr-2" id="manual" type="radio" name="transmission" value="МКП">
+                    <label class="text-gray-700" for="manual">МКП</label>
+                </div>
+                <div class="flex items-center">
+                    <input class="mr-2" id="automatic" type="radio" name="transmission" value="АКП">
+                    <label class="text-gray-700" for="automatic">АКП</label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="image">Картинка</label>
+                <input class="border-2 border-gray-300 rounded-lg p-2 w-full" id="image" type="text" name="image" placeholder="Введите ссылку на картинку">
+            </div>
+            <div class="flex justify-between">
+                <button class="w-1/3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" type="submit" disabled>Выбрать</button>
+                <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg" type="button">Отмена</button>
+            </div>
+        </div>
+    </div>
+    <!-- Подключение скрипта для динамической загрузки моделей автомобилей -->
+    <script>
+        const makeSelect = document.getElementById('make');
+        const modelSelect = document.getElementById('model');
+
+        makeSelect.addEventListener('change', () => {
+            // Очищаем список моделей
+            modelSelect.innerHTML = '<option value="">Выберите модель автомобиля</option>';
+            // Если марка автомобиля выбрана, разблокируем поле для выбора модели
+            if (makeSelect.value !== '') {
+                modelSelect.disabled = false;
+            } else {
+                modelSelect.disabled = true;
+            }
+        });
+
+        // Загружаем модели автомобилей при выборе марки из списка
+        makeSelect.addEventListener('change', () => {
+            if (makeSelect.value === 'Audi') {
+                modelSelect.innerHTML = `
+                    <option value="A1">A1</option>
+                    <option value="A3">A3</option>
+                    <option value="A4">A4</option>
+                    <option value="A5">A5</option>
+                    <option value="A6">A6</option>
+                `;
+            } else if (makeSelect.value === 'BMW') {
+                modelSelect.innerHTML = `
+                    <option value="1 Series">1 Series</option>
+                    <option value="2 Series">2 Series</option>
+                    <option value="3 Series">3 Series</option>
+                    <option value="4 Series">4 Series</option>
+                    <option value="5 Series">5 Series</option>
+                `;
+            } else if (makeSelect.value === 'Mercedes-Benz') {
+                modelSelect.innerHTML = `
+                    <option value="A-Class">A-Class</option>
+                    <option value="B-Class">B-Class</option>
+                    <option value="C-Class">C-Class</option>
+                    <option value="E-Class">E-Class</option>
+                    <option value="S-Class">S-Class</option>
+                `;
+            } else if (makeSelect.value === 'Toyota') {
+                modelSelect.innerHTML = `
+                    <option value="Corolla">Corolla</option>
+                    <option value="Camry">Camry</option>
+                    <option value="RAV4">RAV4</option>
+                    <option value="Highlander">Highlander</option>
+                    <option value="Land Cruiser">Land Cruiser</option>
+                `;
+            } else if (makeSelect.value === 'Volkswagen') {
+                modelSelect.innerHTML = `
+                    <option value="Polo">Polo</option>
+                    <option value="Golf">Golf</option>
+                    <option value="Passat">Passat</option>
+                    <option value="Tiguan">Tiguan</option>
+                    <option value="Touareg">Touareg</option>
+                `;
+            }
+        });
+
+        // Разблокируем кнопку "Выбрать", если все обязательные поля заполнены
+        const requiredFields = document.querySelectorAll('[required]');
+        const submitButton = document.querySelector('button[type="submit"]');
+        requiredFields.forEach(field => {
+            field.addEventListener('input', () => {
+                let allFilled = true;
+                requiredFields.forEach(field => {
+                    if (field.value === '') {
+                        allFilled = false;
+                    }
+                });
+                if (allFilled) {
+                    submitButton.disabled = false;
+                } else {
+                    submitButton.disabled = true;
+                }
+            });
+        });
+    </script>
     </main>
 
     <footer class="bg-white shadow text-black py-4">
