@@ -10,22 +10,16 @@
 </head>
 
 <body>
-	 <header class="bg-white shadow ">
-    <div class="container py-4 mx-auto max-w-5xl">
-      <div class="flex items-center justify-between">
-        <div class="flex-shrink-0 ">
-          <a href="index.html">
-            <img src="img/logo.png" alt="s" class="h-10">
-          </a>
-        </div>
-        <nav class="hidden md:block">
-          <a href="branches.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Филиалы</a>
-          <a href="booking.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Бронирование</a>
-          <a href="login.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Личный кабинет</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+	<header class="bg-white shadow ">
+		<div class="container py-4 mx-auto max-w-5xl">
+			<div class="flex items-center justify-between">
+				<div class="flex-shrink-0 ">
+					<a href="index.html"> <img src="img/logo.png" alt="s" class="h-10"> </a>
+				</div>
+				<nav class="hidden md:block"> <a href="branches.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Филиалы</a> <a href="booking.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Бронирование</a> <a href="login.html" class="text-gray-600 hover:text-blue-600 font-medium mx-4">Личный кабинет</a> </nav>
+			</div>
+		</div>
+	</header>
 	<main class="px-4 py-8 md:px-0 md:py-16 bg-gray-100">
 		<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
 			<div class="bg-white rounded-lg p-8 flex flex-col justify-between">
@@ -34,22 +28,22 @@
 						<h1 class="text-2xl font-bold">Toyota - Corolla</h1>
 						<button class="text-blue-600 font-semibold hover:text-blue-700">Изменить тариф</button>
 					</div>
-					<p class="text-gray-600 mb-2">Идентификатор машины: 123456</p>
-					<p class="text-gray-600 mb-2">Марка авто: Toyota</p>
-					<p class="text-gray-600 mb-2">Название авто: Corolla</p>
-					<p class="text-gray-600 mb-2">Номер машины: А123ВВ77</p>
-					<p class="text-gray-600 mb-2">Стоимость бронирования за день: 3000 рублей</p>
-					<p class="text-gray-600 mb-2">Филиал: 1</p>
 					<form>
-						<div class="flex flex-col md:flex-row mb-2">
+						<p class="text-gray-600 mb-3">Идентификатор машины: 123456</p>
+						<p class="text-gray-600 mb-3">Марка авто: Toyota</p>
+						<p class="text-gray-600 mb-3">Название авто: Corolla</p>
+						<p class="text-gray-600 mb-3">Номер машины: А123ВВ77</p>
+						<div class="flex flex-col md:flex-row mb-3">
 							<label for="start-date" class="text-gray-600 mr-4 md:w-1/4">Дата бронирования:</label>
 							<input type="date" name="start-date" id="start-date-input" class="border border-gray-300 px-4 py-2 rounded-lg w-full md:w-3/4" required> </div>
-						<div class="flex flex-col md:flex-row mb-2">
+						<div class="flex flex-col md:flex-row mb-3">
 							<label for="end-date" class="text-gray-600 mr-4 md:w-1/4">Дата возврата:</label>
 							<input type="date" name="end-date" id="end-date-input" class="border border-gray-300 px-4 py-2 rounded-lg w-full md:w-3/4" required> </div>
-						<div class="flex flex-col md:flex-row mb-2">
+						<div class="flex flex-col md:flex-row mb-3">
 							<label for="booking-days" class="text-gray-600 mr-4 md:w-1/4">Количество дней:</label>
 							<input type="number" name="booking-days" id="booking-days" class="border border-gray-300 px-4 py-2 rounded-lg w-full md:w-3/4" min="1" max="30" required> </div>
+						<p class="text-gray-600 mb-2">Стоимость бронирования за день: 3000 рублей</p>
+						<p class="text-gray-600 mb-2">Филиал: 1</p>
 					</form>
 				</div>
 				<div class="flex flex-col justify-between items-center">
@@ -86,33 +80,24 @@
 								<option value="mastercard">Мир **** 9012</option>
 							</select>
 						</div>
-				
+						<div class="flex flex-col mb-4">
+							<label for="passport-number" class="text-gray-600 mb-2">Паспортные данные:</label>
+							<input type="text" name="passport-number" id="passport-number" class="border border-gray-300 px-4 py-2 rounded-lg" required> </div>
 				</form>
 				</div>
 			</div>
 	</main>
 	<footer class="bg-white shadow text-black py-4">
 		<div class="container mx-auto flex justify-between items-center max-w-5xl ">
-		  <div class="footer-contact">
-			<p class="mx-4 font-bold">Телефон: 8 (800) 555-35-35</p>
-		  </div>
-		  <div class="footer-nav grid grid-cols-2 gap-4 justify-end items-center">
-			
-			<div class="flex flex-col">
-			  <a href="branches.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Филиалы</a>
-			  <a href="booking.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Бронирование</a>
-			  <a href="login.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Войти</a>
-			  <a href="register.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Регистрация</a>
+			<div class="footer-contact">
+				<p class="mx-4 font-bold">Телефон: 8 (800) 555-35-35</p>
 			</div>
-			<div class="flex flex-col">
-			  <a href="profile.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Личный кабинет</a>
-			  <a href="history.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">История бронирования</a>
-			  <a href="cards.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Банковские карты</a>
-			  <a href="car-select.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Выбор автомобиля</a>
+			<div class="footer-nav grid grid-cols-2 gap-4 justify-end items-center">
+				<div class="flex flex-col"> <a href="branches.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Филиалы</a> <a href="booking.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Бронирование</a> <a href="login.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Войти</a> <a href="register.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Регистрация</a> </div>
+				<div class="flex flex-col"> <a href="profile.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Личный кабинет</a> <a href="history.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">История бронирования</a> <a href="cards.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Банковские карты</a> <a href="car-select.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Выбор автомобиля</a> </div>
 			</div>
-		  </div>
 		</div>
-	  </footer>
+	</footer>
 	<script src="js/booking.js"></script>
 </body>
 

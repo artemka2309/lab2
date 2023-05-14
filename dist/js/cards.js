@@ -53,16 +53,24 @@
     });
 
     popupSubmit.addEventListener('click', (event) => {
-        event.preventDefault();
-        const cardNumber = document.getElementById('card-number').value;
-        const cardType = document.getElementById('card-type').value;
-        const cardExpiry = document.getElementById('card-expiry').value;
-        addCard(cardType, `**** **** **** ${cardNumber.slice(-4)}`, true);
-        document.getElementById('card-number').value = '';
-        document.getElementById('card-type').value = 'Visa';
-        document.getElementById('card-expiry').value = '';
-        popupOverlay.classList.add('hidden');
-    });
+      event.preventDefault();
+      const cardNumber = document.getElementById('card-number').value;
+      const cardType = document.getElementById('card-type').value;
+      const cardExpiry = document.getElementById('card-expiry').value;
+      const cardNumberRegex = /^[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}$/;
+      const cardExpiryRegex = /^[0-9]{2}\/[0-9]{2}$/;
+      if (cardNumber === '' || cardType === '' || cardExpiry === '') {
+          alert('Please fill in all fields.');
+      } else if (!cardNumber.match(cardNumberRegex) || !cardExpiry.match(cardExpiryRegex)) {
+          alert('Please enter a valid card number and expiry date.');
+      } else {
+          addCard(cardType, `**** **** **** ${cardNumber.slice(-4)}`, true);
+          document.getElementById('card-number').value = '';
+          document.getElementById('card-type').value = 'Visa';
+          document.getElementById('card-expiry').value = '';
+          popupOverlay.classList.add('hidden');
+      }
+  });
 
     deleteSelectedButton.addEventListener('click', () => {
         deleteSelectedCards();
