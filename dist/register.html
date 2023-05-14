@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Главная</title>
+  <title>Регистрация</title>
   <link href="../public/styles.css" rel="stylesheet">
   <!-- <link href="styles/normolize-css" rel="stylesheet"> -->
   <!-- <link href="styles/style.css" rel="stylesheet"> -->
@@ -26,53 +26,55 @@
       </div>
     </div>
   </header>
-
-  <main class="login-cont">
-      <div class="login-block">
-          <h2>Создать аккаунт</h2>
-          <form>
-            <label for="last-name">Фамилия:</label>
-            <input type="text" id="last-name" name="last-name" required>
-            <label for="first-name">Имя:</label>
-            <input type="text" id="first-name" name="first-name" required>
-            <label for="middle-name">Отчество:</label>
-            <input type="text" id="middle-name" name="middle-name" required>
-            <label for="passport">Паспортные данные (серия и номер):</label>
-            <input type="text" id="passport" name="passport" required>
-            <label for="phone">Телефон:</label>
-            <input type="tel" id="phone" name="phone" required>
-            <label for="date-of-birth">Дата рождения:</label>
-            <input type="date" id="date-of-birth" name="date-of-birth" required>
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required>
-            <label for="confirm-password">Повторите пароль:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
-            <button type="submit" formaction="profile.html">Зарегистрироваться</button>
-          </form>
+  <main class="bg-gray-100 py-8">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="bg-white shadow-md rounded-lg px-8 py-10">
+        <h2 class="text-2xl font-medium mb-6">Создать аккаунт</h2>
+        <form>
+          <div class="grid grid-cols-2 gap-6">
+            <label for="last-name" class="block font-medium mb-2">Фамилия:</label>
+            <input type="text" id="last-name" name="last-name" required class="border-gray-400 border-2 p-2 rounded-lg">
+            <label for="first-name" class="block font-medium mb-2">Имя:</label>
+            <input type="text" id="first-name" name="first-name" required class="border-gray-400 border-2 p-2 rounded-lg">
+            <label for="middle-name" class="block font-medium mb-2">Отчество:</label>
+            <input type="text" id="middle-name" name="middle-name" required class="border-gray-400 border-2 p-2 rounded-lg">
+            <label for="passport" class="block font-medium mb-2">Паспортные данные (серия и номер):</label>
+            <input type="text" id="passport" name="passport" required class="border-gray-400 border-2 p-2 rounded-lg">
+            <label for="phone" class="block font-medium mb-2">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required class="border-gray-400 border-2 p-2 rounded-lg">
+            <label for="date-of-birth" class="block font-medium mb-2">Дата рождения:</label>
+            <input type="date" id="date-of-birth" name="date-of-birth" required class="border-gray-400 border-2 p-2 rounded-lg">
+            <label for="password" class="block font-medium mb-2">Пароль:</label>
+            <input type="password" id="password" name="password" required class="border-gray-400 border-2 p-2 rounded-lg">
+            <label for="confirm-password" class="block font-medium mb-2">Повторите пароль:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required class="border-gray-400 border-2 p-2 rounded-lg"> </div>
+          <button type="submit" formaction="profile.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg mt-6 hover:bg-blue-700">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-white shadow text-black py-4">
+    <div class="container mx-auto flex justify-between items-center max-w-5xl ">
+      <div class="footer-contact">
+        <p class="mx-4 font-bold">Телефон: 8 (800) 555-35-35</p>
+      </div>
+      <div class="footer-nav grid grid-cols-2 gap-4 justify-end items-center">
+        
+        <div class="flex flex-col">
+          <a href="branches.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Филиалы</a>
+          <a href="booking.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Бронирование</a>
+          <a href="login.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Войти</a>
+          <a href="register.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Регистрация</a>
         </div>
-
-    </main>
-    <footer class="bg-white shadow text-black py-4">
-      <div class="container mx-auto flex justify-between items-center max-w-5xl">
-        <div class="footer-contact">
-          <p class="mx-4 font-bold">Телефон: 8 (800) 555-35-35</p>
-        </div>
-        <div class="footer-nav grid grid-cols-2 gap-4 justify-end items-center">
-          <div class="flex flex-col">
-            <a href="branches.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Филиалы</a>
-            <a href="booking.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Бронирование</a>
-            <a href="login.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Войти</a>
-            <a href="register.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Регистрация</a>
-          </div>
-          <div class="flex flex-col">
-            <a href="profile.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Личный кабинет</a>
-            <a href="history.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">История бронирования</a>
-            <a href="cards.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Банковские карты</a>
-            <a href="car-select.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Выбор автомобиля</a>
-          </div>
+        <div class="flex flex-col">
+          <a href="profile.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Личный кабинет</a>
+          <a href="history.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">История бронирования</a>
+          <a href="cards.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Банковские карты</a>
+          <a href="car-select.html" class="font-semibold hover:text-blue-700 h-10 flex items-center">Выбор автомобиля</a>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
   
       <script src="js/script.js"></script>
   </body>

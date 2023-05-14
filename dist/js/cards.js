@@ -10,13 +10,24 @@
         const card = document.createElement('div');
         card.classList.add('card', 'border', 'border-gray-300', 'rounded-md', 'p-4');
         card.innerHTML = `
-        <button class="delete absolute top-0 right-0 mt-2 mr-2 text-sm text-gray-500 hover:text-red-500 focus:text-red-500 transition duration-300 ease-in-out">Удалить</button>
-        <div class="type text-lg font-bold mb-2 text-gray-700">${type}</div>
-        <div class="number text-2xl font-bold mb-4 text-gray-900">${number}</div>
-        <div class="activity text-sm font-medium ${activity ? 'text-green-500' : 'text-red-500'}">${activity ? 'Активна' : 'Закончился срок обслуживания карты'}</div>
+          <div class="type text-lg font-bold mb-2 text-gray-700">${type}</div>
+          <div class="number text-2xl font-bold mb-4 text-gray-900">${number}</div>
+          <div class="activity text-sm font-medium ${activity ? 'text-green-500' : 'text-red-500'}">${activity ? 'Активна' : 'Закончился срок обслуживания карты'}</div>
+          <button class="delete absolute top-0 right-0 mt-2 mr-2 text-3xl text-gray-500 hover:text-red-500 focus:text-red-500 transition duration-300 ease-in-out">&times;</button>
         `;
         cardList.appendChild(card);
-    }
+      
+        const deleteButton = card.querySelector('.delete');
+        if (deleteButton) {
+          deleteButton.addEventListener('click', () => {
+            deleteCard(card);
+          });
+        }
+      
+        card.addEventListener('click', () => {
+          toggleSelected(card);
+        });
+      }
 
     function deleteCard(card) {
         cardList.removeChild(card);
