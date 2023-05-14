@@ -1,6 +1,6 @@
 const makeSelect = document.getElementById('make');
 const modelSelect = document.getElementById('model');
-const carClassSelect = document.getElementById('car-class');
+
 
 // Обработчик события change для makeSelect
 makeSelect.addEventListener('change', () => {
