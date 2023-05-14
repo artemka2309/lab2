@@ -8,7 +8,7 @@
 
     function addCard(type, number, activity) {
         const card = document.createElement('div');
-        card.classList.add('card', 'border', 'border-gray-300', 'rounded-md', 'p-4');
+        card.classList.add('card', 'border', 'border-gray-300', 'rounded-md', 'p-4', 'bg-white');
         card.innerHTML = `
           <div class="type text-lg font-bold mb-2 text-gray-700">${type}</div>
           <div class="number text-2xl font-bold mb-4 text-gray-900">${number}</div>
@@ -42,7 +42,6 @@
 
     function toggleSelected(card) {
         card.classList.toggle('selected');
-        card.classList.toggle('bg-gray-200');
     }
 
     popupButton.addEventListener('click', () => {

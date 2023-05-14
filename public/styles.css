@@ -1394,3 +1394,8 @@ video {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+
+.card.selected {
+  background-color: #e5e7eb; /* замените на желаемый цвет фона */
+}
