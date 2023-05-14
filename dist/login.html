@@ -27,22 +27,23 @@
     </div>
   </header>
 
-  <main class="login-cont bg-gray-100 py-10 px-4 sm:px-6 lg:px-8 ">
-   <div class="bg-white max-w-md mx-auto p-8 rounded-lg shadow-md">
-      <h1 class="text-2xl font-bold mb-4 text-center">Вход в личный кабинет</h1>
-      <form >
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2" for="phone">Телефон</label>
-          <input class="border-2 border-gray-300 rounded-lg p-2 w-full" id="phone" type="text" name="phone" required>
-        </div>
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2" for="password">Пароль</label>
-          <input class="border-2 border-gray-300 rounded-lg p-2 w-full" id="password" type="password" name="password" required>
-        </div>
-        <div class="mb-4">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg w-full" type="submit">Войти</button>
-        </div>
-      </form>
+  <main class="bg-gray-100 py-12">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="bg-white rounded-lg px-8 py-10">
+        <h2 class="text-2xl font-medium mb-6">Вход в личный кабинет</h2>
+        <form>
+          <div class="grid grid-cols-2 gap-6">
+            <label for="phone" class="block font-medium mb-2">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required class="border-gray-400 border-2 p-2 rounded-lg">
+            <label for="password" class="block font-medium mb-2">Пароль:</label>
+            <input type="password" id="password" name="password" required class="border-gray-400 border-2 p-2 rounded-lg">
+          <button type="submit" formaction="profile.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg mt-6 hover:bg-blue-700">Войти</button>
+          <div class="mt-8 ml-9 text-blue-600 font-medium text-l"><a href="register.html">Нет аккаунта? Зарегистрируйтесь</a></div>
+        </form>
+
+      </div>
+
+      
     </div>
   </main>
   <footer class="bg-white shadow text-black py-4">
