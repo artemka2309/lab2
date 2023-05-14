@@ -30,34 +30,27 @@
     <main class="profile-cont">
       <div class="bg-white max-w-4xl mx-auto border border-gray-300 rounded-lg shadow mb-4 mt-4  p-6">
         <h1 class="text-2xl font-bold mb-8 text-center">Личный кабинет</h1>
-        <div class="flex flex-wrap mb-8">
-          <div class="w-1/2">
-            <p class="text-gray-700 font-bold mb-2">Фамилия</p>
-            <p class="text-gray-700">{{surname}}</p>
-          </div>
-          <div class="w-1/2">
-            <p class="text-gray-700 font-bold mb-2">Имя</p>
-            <p class="text-gray-700">{{name}}</p>
-          </div>
-          <div class="w-1/2">
-            <p class="text-gray-700 font-bold mb-2">Отчество</p>
-            <p class="text-gray-700">{{patronymic}}</p>
-          </div>
-          <div class="w-1/2">
-            <p class="text-gray-700 font-bold mb-2">Паспортные данные</p>
-            <p class="text-gray-700">{{passport}}</p>
-          </div>
-          <div class="w-1/2">
-            <p class="text-gray-700 font-bold mb-2">Телефон</p>
-            <p class="text-gray-700">{{phone}}</p>
-          </div>
-          <div class="w-1/2">
-            <p class="text-gray-700 font-bold mb-2">Дата рождения</p>
-            <p class="text-gray-700">{{dob}}</p>
-          </div>
-        </div>
+        <form>
+					<div class="flex flex-col mb-4">
+						<label for="last-name" class="text-gray-600 mb-2">Фамилия:</label>
+						<input type="text" name="last-name" id="last-name" class="border border-gray-300 px-4 py-2 rounded-lg" value="Иванов" required> </div>
+					<div class="flex flex-col mb-4">
+						<label for="first-name" class="text-gray-600 mb-2">Имя:</label>
+						<input type="text" name="first-name" id="first-name" class="border border-gray-300 px-4 py-2 rounded-lg" value="Иван" required> </div>
+					<div class="flex flex-col mb-4">
+						<label for="middle-name" class="text-gray-600 mb-2">Отчество:</label>
+						<input type="text" name="middle-name" id="middle-name" class="border border-gray-300 px-4 py-2 rounded-lg" value="Иванович" required> </div>
+					<div class="flex flex-col mb-4">
+						<label for="phone-number" class="text-gray-600 mb-2">Номер телефона:</label>
+						<input type="tel" name="phone-number" id="phone-number" class="border border-gray-300 px-4 py-2 rounded-lg" value="+7 (999) 123-45-67" required> </div>
+					<div class="flex flex-col mb-4">
+						<label for="passport-number" class="text-gray-600 mb-2">Паспортные данные:</label>
+						<input type="text" name="passport-number" id="passport-number" class="border border-gray-300 px-4 py-2 rounded-lg" value="0119 234264" required> </div>
+          
+				
+				</form>
         <div class="mb-8">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mr-4" onclick="location.href='bank-cards.html'">Банковские карты</button>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mr-4" onclick="location.href='cards.html'">Банковские карты</button>
           <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg" onclick="location.href='index.html'">Выход</button>
         </div>
       </div>
