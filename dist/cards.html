@@ -54,27 +54,29 @@
 			</div>
 			<div id="popup-overlay" class="fixed inset-0 z-10 hidden overflow-y-auto">
 				<div class="flex items-center justify-center min-h-screen">
-					<div class="bg-white rounded-lg border border-gray-500 w-full max-w-md mx-auto p-8">
-						<h2 class="text-2xl font-bold mb-4">Добавление карточки для оплаты</h2>
-						<button class="popup-close absolute top-0 right-0 mt-2 mr-2 text-3xl text-gray-500 hover:text-red-500 focus:text-red-500 transition duration-300 ease-in-out">&times;</button>
-						<div class="popup-text">
-							<form action="" method="post" class="space-y-4">
-								<label for="card-number" class="block font-medium text-gray-700">Номер карты:</label>
-								<input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="card-number" name="card-number" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="19" required>
-								<label for="card-type" class="block font-medium text-gray-700">Тип карты:</label>
-								<select class="form-control bg-gray-100 border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="card-type" name="card-type" required>
-									<option value="Visa">Visa</option>
-									<option value="MasterCard">MasterCard</option>
-									<option value="Мир">Мир</option>
-								</select>
-								<label for="card-expiry" class="block font-medium text-gray-700">Срок действия:</label>
-								<input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="card-expiry" name="card-expiry" pattern="[0-9]{2}/[0-9]{2}" maxlength="5" required>
-								<button type="submit" class="popup-submit bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out">Добавить</button>
-							</form>
+				  <div class="bg-white rounded-lg border border-gray-500 w-full max-w-md mx-auto p-8 absolute">
+					<button class="popup-close text-3xl text-gray-500 hover:text-red-500 focus:text-red-500 transition duration-300 ease-in-out absolute top-0 right-0 mr-4">&times;</button>
+					<h2 class="text-2xl font-bold mb-4">Добавление карточки для оплаты</h2>
+					<div class="popup-text flex flex-col justify-between h-full">
+					  <form action="" method="post" class="space-y-4 flex-1">
+						<label type="" for="card-number" class="block font-medium text-gray-700">Номер карты:</label>
+						<input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="card-number" name="card-number" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="19" required>
+						<label for="card-type" class="block font-medium text-gray-700">Тип карты:</label>
+						<select class="form-control bg-gray-100 border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="card-type" name="card-type" required>
+						  <option value="Visa">Visa</option>
+						  <option value="MasterCard">MasterCard</option>
+						  <option value="Мир">Мир</option>
+						</select>
+						<label for="card-expiry" class="block font-medium text-gray-700">Срок действия:</label>
+						<input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="card-expiry" name="card-expiry" pattern="[0-9]{2}/[0-9]{2}" maxlength="5" required>
+						<div class="flex justify-center">
+						  <button type="submit" class="popup-submit bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Отправить</button>
 						</div>
+					  </form>
 					</div>
+				  </div>
 				</div>
-			</div>
+			  </div>
 		</div>
 	</main>
 	<footer class="bg-white shadow text-black py-4">
